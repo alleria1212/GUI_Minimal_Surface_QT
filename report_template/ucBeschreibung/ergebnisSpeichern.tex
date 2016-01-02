@@ -1,0 +1,26 @@
+\textbf{Ergebnis speichern}
+  \begin{itemize}
+  \item \textit{Ziel:} Der Nutzer will die Ergebnisdaten speichern.
+  \item \textit{Einordnung:} Hauptfunktion
+  \item \textit{Vorbedingung:} Die Applikation wurde gestartet.
+  \item \textit{Nachbedingung:} Das System erstellt eine .surface Datei mit den gespeicherten Daten, den numerischen Parametern und der Gebietsgr\"o\ss e. Das MainWindow wird angezeigt.
+    \item \textit{Nachbedingung im Fehlerfall:} Das System zeigt eine Fehlermeldung, weil noch keine Berechnung durchgef\"uhrt wurde.
+      \item \textit{Hauptakteure:} Nutzer
+  \item \textit{Nebenakteure:} System
+  \item \textit{Ausl\"oser:} Der Nutzer m\"ochte die Ergebnisdaten speichern.
+    \item \textit{Standardablauf:}
+    \begin{enumerate}
+    \item Der Nutzer klickt mit der linken Maustaste "Ergebnis speichern" an.
+    \item Das System pr\"uft, ob eine Berechnung schon durchgef\"uhrt wurde.
+    \item Das System zeigt das Dialogfenster an.
+    \item Der Nutzer sucht und w\"ahlt einen Pfad aus.
+	\item Der Nutzer gibt \"uber die Tastatur den Dateinamen ein.
+	\item Der Nutzer klickt auf den Button "Speichern".
+	\item Das System speichert die Ergebnisdaten als .surface Datei
+  \end{enumerate}
+  \item \textit{Verzweigungen:}
+    \begin{enumerate}[label=(2\arabic*)]
+\item Das System zeigt eine Fehlermeldung an, da zuvor keine Berechnung durchgef\"uhrt wurde.
+\item Der UC Ergebnis speichern wird beendet.
+    \end{enumerate}
+  \end{itemize}

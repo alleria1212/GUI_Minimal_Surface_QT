@@ -1,0 +1,11 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Scalar first-order tangent-linear mode by overloading
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Uwe Naumann, December 2010
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Type "make" to build executable.
+Type "./main" to compute gradient
+Type "make clean " to remove generated files.

@@ -1,0 +1,147 @@
+\chapter{Analyse}
+\label{ch:2}
+
+\section{Anforderungsanalyse}
+\label{sec:2.1}
+
+\subsection{Benutzeranforderungen}
+
+Die Applikation erm\"oglicht es dem Benutzer, f\"ur bestimmte 3-D Konstruktionen die Minimalfl\"achen zu berechnen und graphisch darzustellen.\\
+Die Applikation gibt nach Starten zun\"achst beispielhafte Einstellungen und Randwerte vor.\\
+Der Benutzer kann per Mausklick auf der Benutzeroberfl\"ache zwischen 3 verschiedenen Tabs wechseln.\\
+Auf dem ersten Tab ("`Einstellungen"'), das nach Starten des Programmes angezeigt wird, kann der Benutzer die verschiedenen numerischen Parameter (Anzahl der St\"utzstellen in X- und Y Richtung,  Abbruchfehler, maximale Iterationsanzahl, Randfunktionen, Definitionsbereich) in den daf\"ur zust\"andigen Textfeldern \"andern.\\
+In den mit "`Grenzen"'  markierten Textfeldern kann der Benutzer Randfunktionen setzen, indem er Funktionen eingibt, f\"ur die die Minimalfl\"achen berechnet werden sollen. Weiterhin kann der Benutzer den Definitionsbereich der Randfunktionen einstellen in den Textfeldern markiert mit "`Definitionsbereich"'.\\
+Unter "`Numerische Parameter"'  kann der Benutzer die Parameter f\"ur die Approximation \"andern, die Fehlergrenze, die Anzahl der St\"utzstellen in x- und y- Richtung und die maximale Iterationszahl.
+Die maximale Iterationszahl ist die Anzahl an Iterationen, die die Applikation f\"ur die Approximation verwendet, falls die Fehlergrenze nicht vorher unterschritten wird.\\
+Der Benutzer kann zu jeder Zeit  mit dem Button "`Quit"' das Programm beenden. \\
+Ausserdem kann der Benutzer auch mit einem Mausklick auf "`Einstellungen Speichern"' die gew\"ahlten Einstellungen in einem Dokument speichern und mit einem Klick auf "`Einstellungen Laden"' kann er bereits gespeicherte Einstellungen wiederherstellen.\\
+Wenn der Nutzer fertig mit den Einstellungen ist, kann er auf "`Run"'  dr\"ucken, um die Simulation zu starten. \\
+Die Applikation checkt die Einstellungen und zeigt im Fehlerfall eine Fehlermeldung an und ansonsten wird die Berechnung gestartet.\\
+Geschieht dies, wechselt die Applikation automatisch auf das zweite Tab "`Konsolenausgabe"'.
+Weiterhin zeigt die Applikation die Ausgabe der Anwendung an, den Fortschritt, die Iterationszahl und den aktuellen Fehler.\\
+Der Fortschritt ist au\" sserdem auf einem Fortschrittsbalken zu sehen.\\
+Ist die Berechnung beendet, wechselt die Applikation automatisch auf das dritte Tab "`Anzeige"', wo der Benutzer die fertige 3-D Simulation auf der Zeichenfl\"ache sehen und mithilfe der Maus beliebig drehen kann.\\
+Der Benutzer kann dabei jederzeit die Tabs wechseln, auch bevor die Berechnung beendet ist.\\
+Wechselt der Benutzer auf das Anzeigetab w\"ahrend die Berechnung l\"auft, dann zeigt die Applikation den derzeitigen Rechenschritt, d.h. den instation\"aren Berechnunungsverlauf an.
+Der Benutzer kann auch schon berechnete Minimalfl\"achen (Ergebnisse) speichern oder laden mit einem Mausklick auf den zugeh\"origen Button.\\
+
+
+%\\
+%z.B. L\"osung nichtlinearer Gleichungssysteme resultierend aus Anwendung
+%mit Newton's Methode \cite{Heath1998SCA,Kelley2003SNE};
+%Problemspezifikation; Weiterverarbeitung der Resultate
+
+
+
+\subsection{Anwendungsfallanalyse}
+
+\epsfig{file=Bilder/Top_Level_Use_Cases.eps,width=\textwidth}
+
+\subsubsection{Systemanforderungen}
+
+\input{ucBeschreibung/beenden}
+
+\epsfig{file=Bilder/Beenden1.eps,width=\textwidth}
+
+\input{ucBeschreibung/checkInput}
+
+\epsfig{file=Bilder/Check_Input.eps,width=\textwidth}
+
+\input{ucBeschreibung/checkRandfunktionen}
+
+\epsfig{file=Bilder/Check_Randfunktionen.eps,width=\textwidth}
+
+\input{ucBeschreibung/einstellungenLaden}
+
+\epsfig{file=Bilder/Einstellungen_laden.eps,width=\textwidth}
+
+\input{ucBeschreibung/einstellungenSpeichern}
+
+\epsfig{file=Bilder/Einstellungen_speichern_1.eps,width=\textwidth}
+
+\input{ucBeschreibung/ergebnisLaden}
+\epsfig{file=Bilder/Ergebnis_laden_1.eps,width=\textwidth}
+\input{ucBeschreibung/ergebnisSpeichern}
+\epsfig{file=Bilder/Einstellungen_speichern_1.eps,width=\textwidth}
+\input{ucBeschreibung/gebiertsgroesseAendern}
+
+\epsfig{file=Bilder/Gebietsgroesse_aendern1.eps,width=\textwidth}
+\input{ucBeschreibung/numerischeParameterAendern}
+\epsfig{file=Bilder/Numerische_Parameter_aendern.eps,width=\textwidth}
+\input{ucBeschreibung/randfunktionenAendern}
+\epsfig{file=Bilder/Numerische_Parameter_aendern.eps,width=\textwidth}
+\input{ucBeschreibung/run}
+\epsfig{file=Bilder/Run1.eps,width=\textwidth}
+\input{ucBeschreibung/tabWechseln}
+\epsfig{file=Bilder/Tab_wechseln1.eps,width=\textwidth}
+
+
+\subsection{Funktionale Anforderung}
+\begin{itemize}
+\item Anzeigen einer Benutzeroberfl\"ache
+\item Speichern der Einstellungen
+\item Laden der Einstellungen
+\item Speichern der Ergebnisse
+\item Laden der Ergebnisse
+\item M\"oglicher Wechsel zwischen drei Tabs. Funktionen des ersten Tabs (Einstellungen):
+	\begin{enumerate}
+	\item Eingabe der Anzahl der St\"utzstellen in X- und Y-Richtung
+	\item Eingabe der Randfunktionen
+	\item Eingabe des Abbruchfehlers
+	\item Eingabe der Anzahl der maximalen Iterationen
+	\item \"Anderung des Gebietes
+	\item Run Button
+	\item Quit Button
+	\end{enumerate}
+\item Funktionen des zweiten Tabs (Konsolenausgabe):
+	\begin{enumerate}
+	\item Anzeigen des Fortschrittes
+	\item Anzeigen von Fehlermeldungen
+	\end{enumerate}
+\item Funktionen des dritten Tabs (Anzeige):
+	\begin{enumerate}
+	\item Graphische Darstellung der berechneten Minimalfl\"achen
+	\item Plot: variabler viewpoint
+	\item Instation\"are Anzeige des derzeitigen Ergebnisses w\"ahrend der Berechnung
+	\end{enumerate}
+\item Test auf G\"ultigkeit des Gebietsbereiches
+\item Test auf ganze Zahl der Anzahl der St\"utzstellen.
+\end{itemize}
+\subsection{Nicht Funktionale Anforderung}
+\begin{itemize}
+\item Eingabe der Zahlen durch Tastatur
+\item Skalierung des Hauptfensters bei unterschiedlichen Aufl\"osungen.
+		\item Skalierung des Hauptfensters bei unterschiedlichen Aufl\"osungen
+		\item Erzeugung von korrekten Ergebnissen
+		\item Intuitive Bedienbarkeit
+		\item Plattformunabh\"angig
+		\item Effiziente Berechnung
+\end{itemize}
+
+
+\section{Begriffsanalyse}
+
+\epsfig{file=Bilder/Begriffsmodel.eps,width=\textwidth}
+
+
+
+\noindent \textbf{Klassenkadidaten} 
+\begin{itemize}
+	\item \textbf{Diskretisierung}
+	\item \textbf{Eingabebereich}
+	\item \textbf{Ausgabebereich}
+	\item \textbf{Main Window}
+	\item Textfeld f\"ur Eingabe
+	\item Button
+	\item Radiobutton
+	\item Dialogfenster
+	\item Fehlermeldung(durch main implementiert)
+	\item Berechnungsparameter
+	\item Randwert
+	\item Gebietsgr\"o\ss e
+\end{itemize}
+
+
+
+
+

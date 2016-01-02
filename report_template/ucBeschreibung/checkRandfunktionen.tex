@@ -1,0 +1,25 @@
+\textbf{Check Randfunktionen}
+  \begin{itemize}
+  \item \textit{Ziel:} Das System will die Randfunktionen \"uberpr\"ufen.
+  \item \textit{Einordnung:} Hauptfunktion
+  \item \textit{Vorbedingung:} Use Case Check Input wurde erfolgreich durchgef\"uhrt.
+  \item \textit{Nachbedingung:} Die Berechnung wird durchgef\"uhrt.
+  \item \textit{Nachbedingung im Fehlerfall:} Die Applikation zeigt eine Fehlermeldung an und markiert die Stelle, an der sich der Fehler befindet.
+  \item \textit{Hauptakteure:} System
+  \item \textit{Nebenakteure:}
+  \item \textit{Ausl\"oser:} Der Nutzer hat auf 'run' gedr\"uckt und UC Check Input war erfolgreich.
+  \item \textit{Standardablauf:}
+    \begin{enumerate}
+    \item Das System pr\"uft, ob weniger als 2 Variablen vorhanden sind.
+    \item Das System pr\"uft, ob die Randfunktionen g\"ultig sind.
+  \end{enumerate}
+  \item \textit{Verzweigungen:}
+    \begin{enumerate}[label=(1a\arabic*)]
+	\item Das System zeigt eine Fehlermeldung, falls mehr als 2 Variablen vorhanden sind.
+	\item Die Berechnung wird abgebrochen.
+	\end{enumerate}
+	 \begin{enumerate}[label=(2a\arabic*)]
+	\item Das System zeigt eine Fehlermeldung, falls die Randfunktion ung\"ultig ist.
+	\item Die Berechnung wird abgebrochen.
+    \end{enumerate}
+  \end{itemize}

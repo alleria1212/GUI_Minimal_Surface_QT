@@ -1,0 +1,58 @@
+\documentclass{book}
+
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage[german]{babel}
+\usepackage{amssymb}
+\usepackage{amsxtra}
+\usepackage[dvips]{epsfig,psfrag}
+\usepackage{listings}
+\usepackage{enumitem}
+
+\newcommand{\subscript}[2]{$#1 _ #2$}
+\newcommand{\refchapter}[1]{Kapitel~\ref{#1}}
+\newcommand{\refsec}[1]{Sektion~\ref{#1}}
+\newcommand{\refeqn}[1]{Gleichung~(\ref{#1})}
+\newcommand{\reffig}[1]{Abbildung~\ref{#1}}
+
+\title{\bf CES Softwareentwicklungspraktikum \\
+{\small Analyse- und Entwurfsdokument} \vspace{1cm}\\
+\epsfig{file=figures/cces_logo.eps,width=\textwidth}
+}
+
+
+\author{Stefan Jeske, Daniel Partida, Tom Witter und Chun-Kan Chow}
+\date{Matr.-Nr. 334033, 335179, 333265, 333715  \\
+email: {\tt [stefan.jeske|daniel.partida|tom.witter|chun-kan.chow]\\
+@rwth-aachen.de} 
+}
+
+\begin{document}
+
+\lstloadlanguages{[ISO]C++}
+\lstset{basicstyle=\small, numbers=left, numberstyle=\footnotesize,
+  stepnumber=1, numbersep=5pt, breaklines=true, escapeinside={/*@}{@*/}}
+
+
+\pagestyle{headings}
+
+\maketitle
+
+\tableofcontents
+
+\include{vorwort}
+\include{analyse}
+\include{entwurf}
+\include{nutzerdoc}
+\include{entwicklerdoc}
+
+%\bibliographystyle{plain}
+%\bibliography{analyse_entwurf}
+
+\appendix
+
+\include{quellcode}
+
+
+\end{document}
+

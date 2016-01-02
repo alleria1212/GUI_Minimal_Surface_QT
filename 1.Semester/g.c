@@ -1,0 +1,10 @@
+y[0] =  exp(x[3])  + sin(x[42])  * sin(x[70]) ;
+y[1] =  sin(x[7])  * sin(x[17])  + (x[21])  + exp(x[40]) ;
+y[2] =  exp(x[42])  * exp(x[55])  + sin(x[67]) ;
+y[3] =  sin(x[20])  + (x[48])  + exp(x[71]) ;
+y[4] =  cos(x[14])  + exp(x[32]) ;
+y[5] =  cos(x[44])  + sin(x[74])  * exp(x[93])  * cos(x[94])  * exp(x[98]) ;
+y[6] =  exp(x[17])  * exp(x[26])  + sin(x[38])  + (x[40])  + sin(x[86])  * (x[97]) ;
+y[7] =  cos(x[1])  * exp(x[26])  * exp(x[53])  + exp(x[57])  * sin(x[60])  + (x[65])  + exp(x[79])  + exp(x[92]) ;
+y[8] =  cos(x[1])  * sin(x[9])  * (x[18])  * (x[23])  * exp(x[34])  + sin(x[82]) ;
+y[9] =  cos(x[21])  * (x[23])  * sin(x[52])  + exp(x[56])  + cos(x[69]) ;

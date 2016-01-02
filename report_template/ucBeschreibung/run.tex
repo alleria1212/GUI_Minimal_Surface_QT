@@ -1,0 +1,35 @@
+\textbf{run}
+  \begin{itemize}
+  \item \textit{Ziel:} Der Nutzer will die Berechnung der Minimalfl\"ache durchf\"uhren und anzeigen.
+  \item \textit{Einordnung:} Hauptfunktion
+  \item \textit{Vorbedingung:} Die Applikation wurde gestartet, alle numerische Parameter, Randfunktionen und Gebietsgr\"o\ss e sind eingegeben.
+  \item \textit{Nachbedingung:} Die Applikation zeigt die berechneten Minimalfl\"achen im Tab "`Anzeige"' an.
+    \item \textit{Nachbedingung im Fehlerfall:} Es wird eine Fehlermeldung angezeigt.
+  \item \textit{Hauptakteure:} Nutzer
+  \item \textit{Nebenakteure:} System
+  \item \textit{Ausl\"oser:} Der Nutzer will die Berechnung starten.
+    \item \textit{Standardablauf:}
+    \begin{enumerate}
+    \item Der Nutzer klickt mit der linken Maustaste auf den Button 'Run'.
+    \item UC "`Check Input"'
+    \item UC "`Check Randfunktionen"'
+    \item Die Applikation wechselt den Tab auf "`Konsolenausgabe"'.
+    \item Die Applikation startet mit den gegeben Einstellungen die Berechnung der Minimalf\"achen.
+    \item Die Applikation zeigt den Fortschritt der Berechnung auf der Benutzeroberfl\"ache an.
+    \item Die Applikation schliesst die Berechnung ab.
+    \item Die Applikation wechselt den Tab auf "`Anzeige"'
+    \item Die Applikation zeigt die berechnete Minimalfl\"ache an.
+  \end{enumerate}
+  \item \textit{Verzweigungen:}
+      \begin{enumerate}[label=(2a\arabic*)]
+  \item Der UC "`Check Input"' ist fehlerhaft, die Applikation zeigt eine Fehlermeldung an und stoppt die Berechnung.
+      \end{enumerate}
+    \begin{enumerate}[label=(3a\arabic*)]
+  \item Der UC "`Check Randfunktionen"' ist fehlerhaft, die Applikation zeigt eine Fehlermeldung an und stoppt die Berechnung.
+    \end{enumerate}
+    \begin{enumerate}[label=(7a\arabic*)]
+    \item Die Berechnung ist nicht konvergiert, die Applikation zeigt auf der "`Konsolenausgabe"' eine Fehlermeldung an.
+     \item Die Applikation wechselt den Tab auf "`Anzeige"'
+     \item Die Applikation zeigt die nicht vollst\"andig berechnete Minimalfl\"ache an.
+        \end{enumerate}
+  \end{itemize}

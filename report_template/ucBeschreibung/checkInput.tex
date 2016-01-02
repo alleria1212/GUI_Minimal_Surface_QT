@@ -1,0 +1,45 @@
+\textbf{Check Input}
+  \begin{itemize}
+  \item \textit{Ziel:} Die Applikation will die Gebietsgr\"o\ss e und die numerischen Parameter \"uberpr\"ufen.
+  \item \textit{Einordnung:} Hauptfunktion
+  \item \textit{Vorbedingung:} Der Nutzer hat auf Run angeklickt.
+  \item \textit{Nachbedingung:} Der Use Case "`Check Randfunktionen"' wird gestartet.
+  \item \textit{Nachbedingung im Fehlerfall:} Die Applikation zeigt eine Fehlermeldung an und markiert die Stelle, an der sich der Fehler befindet.
+  \item \textit{Hauptakteure:} System
+  \item \textit{Nebenakteure:}
+  \item \textit{Ausl\"oser:} Die Applikation m\"ochte die Gebietsgr\"o\ss e und die numerischen Parameter \"uberpr\"ufen.
+  \item \textit{Standardablauf:}
+    \begin{enumerate}
+    \item Die Applikation pr\"uft, ob die eingegebenen Grenzen der Gebietsgr\"o\ss e g\"ultige double Werte sind.
+    \item Die Applikation pr\"uft, ob die obere Grenze xmax gr\"o\ss er als die untere Grenze xmin ist.
+    \item Die Applikation pr\"uft, ob die obere Grenze ymax gr\"o\ss er als die untere Grenze ymin ist.
+    \item Die Applikation pr\"uft, ob der Abbruchfehler eps gr\"o\ss er 0 und ein double ist.
+    \item Die Applikation pr\"uft, ob die maximale Anzahl der Iterationen $max_iteration$, die Anzahl der x-St\"utzstellen n und y-St\"utzstellen m   g\"o\ss er 0 und vom Typ int sind.
+  \end{enumerate}
+  \item \textit{Verzweigungen:}
+    \begin{enumerate}[label=(1a\arabic*)]    
+            \item Die Berechnung wird abgebrochen.
+	\item Die Applikation zeigt eine Fehlermeldung, falls die Gebietsgr\"o\ss e ung\"ultig ist.(keine Zahl eingegeben oder das Feld leer gelassen)
+	\item Das Feld, in dem der Fehler ist, wird markiert.
+	\end{enumerate}
+	 \begin{enumerate}[label=(2a\arabic*)]    
+	 	\item Die Berechnung wird abgebrochen.
+		\item Die Applikation zeigt eine Fehlermeldung, falls xmin gr\"o\ss er gleich xmax ist.
+		\item Das Feld, in dem der Fehler ist, wird markiert.
+	\end{enumerate}
+	 \begin{enumerate}[label=(3a\arabic*)]    
+	 	\item Die Berechnung wird abgebrochen.
+		\item Die Applikation zeigt eine Fehlermeldung, falls ymin gr\"o\ss er gleich ymax ist.\\
+		\item Das Feld, in dem der Fehler ist, wird markiert.
+	\end{enumerate}
+		 \begin{enumerate}[label=(4a\arabic*)]    
+		 	\item Die Berechnung wird abgebrochen.
+		 \item Die Applikation zeigt eine Fehlermeldung, falls eps ung\"ultig ist.
+		 \item Das Feld "`eps edit"' wird markiert.
+		 \end{enumerate}
+	 \begin{enumerate}[label=(5a\arabic*)]    
+	 	\item Die Berechnung wird abgebrochen.
+		\item Die Applikation zeigt eine Fehlermeldung, falls ein numerischer Parameter ung\"ultig ist.
+		\item Das Feld, in dem der Fehler ist, wird markiert.
+    \end{enumerate}
+  \end{itemize}
